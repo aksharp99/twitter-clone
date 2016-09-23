@@ -15,10 +15,31 @@ $(document).ready(function() {
     $(this).animate({height: "-=50px"});
   })
 
+
+var maxCharacters = 140;
+
+$('#char-count').text(maxCharacters);
+
+$('textarea').bind('keyup keydown', function() {
+    var count = $('#char-count');
+    var characters = $('textarea').val().length;
+
+    if (characters >= 130) {
+      count.css("color","red");
+    } else {
+        count.css("color","#999");
+    }
+
+
+    if (characters >= 140) {
+      count.css("color","#999");
+      $('#tweet-submit').hide();
+    } else {
+      $('#tweet-submit').show();
+    }
+  count.text(maxCharacters - characters);
 });
 
 
-  // $('.tweet-compose').on('click', function() {
-  //   $('#tweet-content').animate({padding-top: "20px"})
-  //   $('.button').show();
-  //   $('#char-count').show();
+
+});
