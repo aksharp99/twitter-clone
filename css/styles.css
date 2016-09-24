@@ -171,7 +171,12 @@ body {
 		margin: 10px 0;
 		padding-left: 42px;
 	}
-
+	.move-text {
+		font-size: 14px;
+		color: #333;
+		margin: 10px 0;
+		padding-left: 42px;
+	}
 	.tweet-actions {
 		text-align: right;
 	}

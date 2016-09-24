@@ -39,14 +39,14 @@ $('textarea').bind('keyup keydown', function() {
     }
   count.text(maxCharacters - characters);
 });
-
+value = $("#txt_name").attr('value');
 $('#tweet-submit').on('click', function() {
   $('#stream').prepend("<div class='tweet'>" +
     "<div class='content'>" +
-      "<img class='avatar' src='img/damenleeturks.jpg' />" +
+      "<img class='avatar' src='img/alagoon.jpg' />" +
       "<strong class='fullname'>My BFF</strong>" +
       "<span class='username'>@mybff</span>" +
-    "<p class='tweet-text'>Today is an amazing day.</p>" +
+    "<p id='test' class='tweet-text'>Today is an amazing day.</p>" +
   "<div class='tweet-actions'>" +
   "<ul>" +
   "<li><span class='icon action-reply'></span> Reply</li>" +
@@ -78,6 +78,8 @@ $('#tweet-submit').on('click', function() {
     "</div>" +
     "</div>" +
     "</div>")
-
+    var inputtext = $('textarea').val();
+    $('#test').text(inputtext);
 })
+
 });
